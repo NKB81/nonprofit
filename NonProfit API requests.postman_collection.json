@@ -1,0 +1,73 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NonProfit API requests",
+		"_postman_id": "440d1cec-d97c-54cc-f465-8fbdd5d3b876",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/donations/webapi/donationtypes",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET for getting the Donation Types"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/donations/webapi/donationtypes",
+			"request": {
+				"url": "http://localhost:8080/donations/webapi/donationtypes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DonationType\":\"Toys\",\n\t\"Description\":null\n}"
+				},
+				"description": "POST for creating new Donation Types"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/donations/webapi/donations",
+			"request": {
+				"url": "http://localhost:8080/donations/webapi/donations",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "GET for viewing the existing donations"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/donations/webapi/donations",
+			"request": {
+				"url": "http://localhost:8080/donations/webapi/donations",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"DonorName\":\"Nitin\",\n\t\"DonorEmail\":\"nkb@nitin.com\",\n\t\"DonorPhone\":\"9012145421\",\n\t\"DonationType\":\"Clothes\",\n\t\"DonationAmount\":20,\n\t\"PickUpAddress\":\"123, xyz, 8787, AC\",\n\t\"PickUpDate\":\"2018-10-31\",\n\t\"PickUpTime\":\"12:30\",\n\t\"Status\":\"PENDING\"\n}"
+				},
+				"description": "POST for creating a new Donation Entry"
+			},
+			"response": []
+		}
+	]
+}
